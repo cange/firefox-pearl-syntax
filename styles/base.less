@@ -78,6 +78,10 @@ atom-text-editor .search-results .marker.current-result .region,
 
   &.operator {
     color: @syntax-text-color;
+
+    &.new {
+      color: @green;
+    }
   }
 
   &.other.special-method {
@@ -107,17 +111,15 @@ atom-text-editor .search-results .marker.current-result .region,
     color: @blue-light;
   }
 
-  &.other {
+  &.other,
+  &.numeric,
+  &.boolean,
+  &.property-value {
     color: @red;
   }
 
   &.other.symbol {
     color: @green;
-  }
-
-  &.numeric,
-  &.property-value {
-    color: @red;
   }
 }
 
