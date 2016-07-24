@@ -1,0 +1,14 @@
+@import "syntax-variables";
+
+.tree-view-scroller,
+.item-views {
+  border-top: @shade 1px solid;
+  border-bottom: @shade 1px solid;
+}
+
+atom-text-editor, :host {
+  .gutter {
+    border-left: @shade solid 1px;
+    border-right: @shade-darker solid 1px;
+  }
+}
