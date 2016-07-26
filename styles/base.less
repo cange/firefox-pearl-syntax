@@ -22,6 +22,10 @@ atom-text-editor, :host {
     font-weight: bold;
   }
 
+  .bracket-matcher .region {
+    border-bottom-color: @green !important;
+  }
+
   .gutter {
     background-color: @syntax-gutter-background-color;
     color: @syntax-gutter-text-color;
@@ -84,12 +88,16 @@ atom-text-editor .search-results .marker.current-result .region,
     }
   }
 
-  &.other.special-method {
-    color: @blue;
-  }
+  &.other {
 
-  &.other.unit {
-    color: @red;
+    &.special-method {
+      color: @blue;
+    }
+
+    &.important,
+    &.unit {
+      color: @red;
+    }
   }
 }
 
@@ -228,7 +236,7 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 
   &.name.tag {
-    color: @green;
+    color: @green-dark;
   }
 
   &.definition {
@@ -240,10 +248,6 @@ atom-text-editor .search-results .marker.current-result .region,
 
     &.css {
       color: @green;
-    }
-
-    &.id {
-      color: @blue;
     }
   }
 }
